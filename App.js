@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import {
+  Alert,
   Platform,
   StyleSheet,
   Text,
   View,
   StatusBar,
-  Image
+  Image,
+  TouchableWithoutFeedback
 } from 'react-native';
-import { Alert, StyleSheet, Text, View, TouchableWithoutFeedback } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import SplashScreen from 'react-native-splash-screen';
 
@@ -15,22 +16,24 @@ import SplashScreen from 'react-native-splash-screen';
 
 type Props = {};
 export default class App extends Component<Props> {
-  componentDidMount(){
-  SplashScreen.hide();
-  }
   render() {
+    const { navigate } = this.props.navigation;
     return (
-      const { navigate } = this.props.navigation;
       <TouchableWithoutFeedback onPress={() =>
          navigate('Home')
         }>
       <View style={styles.container}>
-      <Image source={require{'./assests/logo.jpg'}}></Image>
-        </Text>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="FFF"
+        />
+//<Image source={require('./assests/logo.jpg')}></Image>
       </View>
+      </TouchableWithoutFeedback>
     );
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {

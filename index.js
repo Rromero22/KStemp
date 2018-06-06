@@ -1,16 +1,22 @@
 import React from 'react';
 import { StackNavigator} from 'react-navigation';
 import { AppRegistry } from 'react-native';
-import App from './App';
+import Splash from './App';
 import Home from './Home';
 
 //AppRegistry.registerComponent('KSProj', () => App);
 
 const RootStack = StackNavigator({
-    App: {screen: App, },
+    Splash: {screen: Splash, },
     Home: { screen: Home },
   },
   {
-    initialRouteName: 'App',
+    initialRouteName: 'Splash',
   }
 );
+
+export default class App extends React.Component {
+  render() {
+    return <RootStack />;
+  }
+}
