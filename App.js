@@ -12,28 +12,22 @@ import {
 import { StackNavigator } from 'react-navigation';
 import SplashScreen from 'react-native-splash-screen';
 
-
-
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <TouchableWithoutFeedback onPress={() =>
-         navigate('Home')
-        }>
+      <TouchableWithoutFeedback onPress={() => navigate('Home')}>
       <View style={styles.container}>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor="FFF"
-        />
-//<Image source={require('./assests/logo.jpg')}></Image>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="#fff" />
+        <Image source={require('./assests/logo.jpg')}></Image>
       </View>
-      </TouchableWithoutFeedback>
+    </TouchableWithoutFeedback>
     );
   }
 }
-
 
 const styles = StyleSheet.create({
   container: {
