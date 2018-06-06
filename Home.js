@@ -24,6 +24,7 @@ export default class App extends Component<Props> {
               </Text>
            </Text>
         </Text>
+        <Text style={{fontSize: 5}}>arrays start at one</Text>
       </View>
     );
   }
