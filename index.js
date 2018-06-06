@@ -4,11 +4,12 @@ import { AppRegistry } from 'react-native';
 import Splash from './App';
 import Home from './Home';
 
-//AppRegistry.registerComponent('KSProj', () => App);
+AppRegistry.registerComponent('KSProj', () => App);
 
-const RootStack = StackNavigator({
-    Splash: {screen: Splash, },
-    Home: { screen: Home },
+const RootStack = StackNavigator(
+  {
+    Splash: { screen: Splash },
+    Home:   { screen: Home   }
   },
   {
     initialRouteName: 'Splash',
